@@ -18,12 +18,12 @@ class Note:
         last_id += 1
         self.id = last_id
 
-    def match(self, filterr):
+    def match(self, filt):
         '''
-        Determine if this note amtches the filter text. Return True if matches,
+        Determine if this note matches the filter text. Return True if matches,
         False otherwise. Search matches bothtext and tags.
         '''
-        return filterr in self.memo or filterr in self.tags
+        return filt in self.memo or filt in self.tags
 
 class Notebook:
     '''
@@ -70,8 +70,8 @@ class Notebook:
             return True
         return False
 
-    def search(self, filterr):
+    def search(self, filt):
         '''
         Find all notes that match the given filter string.
         '''
-        return [note for note in self.notes if note.match(filterr)]
+        return [note for note in self.notes if note.match(filt)]
