@@ -1,5 +1,5 @@
 # Notebook application short info
-This project is a simple realizationf of notebook application
+This project is a simple realization of notebook application
 
 # Usage
 To use this app, you must run module main.py in your command line
